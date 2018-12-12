@@ -7,6 +7,7 @@
 # How to Run
 export AWS_ACCESS_KEY_ID=""  
 export AWS_SECRET_ACCESS_KEY=""  
+unzip git output
 terraform init  
 terraform plan  
 terraform apply 
