@@ -15,5 +15,5 @@ terraform apply
 On a browser: http://<EC2 externalip address>
 
 # Notes
-You could ssh to the EC2 instance and check /tmp/install.out
-The code will build the the environment in ap-southeast-2
+You could ssh to the EC2 instance and check /tmp/install.out  
+The code will build the the environment in ap-southeast-2  
