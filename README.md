@@ -10,7 +10,7 @@
 4. shell$ terraform init  
 5. shell$ terraform plan  
 6. shell$ terraform apply  
-    Type "Yes" whem prompted for confirmation
+    Type "Yes" whem prompted "Do you want to perform these actions?"
 7. Public_ip address will be displayed on screen
 
 # Testing
@@ -25,5 +25,5 @@
 
 # Cleanup
 1. shell$ erraform destroy  
-    Type "Yes" whem prompted for confirmation 
+    Type "Yes" whem prompted "Do you want to perform these actions?"
 
