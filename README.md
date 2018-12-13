@@ -25,5 +25,5 @@
 
 # Cleanup
 1. shell$ erraform destroy  
-    Type "Yes" whem prompted "Do you want to perform these actions?"
+    Type "Yes" whem prompted "Do you really want to destroy all resources?"
 
