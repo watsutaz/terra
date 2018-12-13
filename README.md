@@ -4,12 +4,12 @@
 3. Key-pair "sinatra-app" created in the AWS EC2 with key downloaded 
 
 # How to Run
-1. export AWS_ACCESS_KEY_ID=""  
-2. export AWS_SECRET_ACCESS_KEY=""  
+1. shell$ export AWS_ACCESS_KEY_ID=""  
+2. shell$ export AWS_SECRET_ACCESS_KEY=""  
 3. unzip git directory and files  
-4. terraform init  
-5. terraform plan  
-6. terraform apply  
+4. shell$ terraform init  
+5. shell$ terraform plan  
+6. shell$ terraform apply  
     Type "Yes" whem prompted for confirmation
 7. Public_ip address will be displayed on screen
 
@@ -24,6 +24,6 @@
 * The code will build the the environment in ap-southeast-2  
 
 # Cleanup
-1. terraform destroy  
+1. shell$ erraform destroy  
     Type "Yes" whem prompted for confirmation 
 
