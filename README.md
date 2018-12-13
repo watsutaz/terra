@@ -10,7 +10,7 @@
 4. terraform init  
 5. terraform plan  
 6. terraform apply 
-   Type "Yes" whem prompted for confirmation
+    Type "Yes" whem prompted for confirmation
 7. Public_ip address will be displayed on screen
 
 # Testing
@@ -18,12 +18,12 @@
 2. Expected output is "Hello World" displayed on the browser
 
 # Notes
-1. It may take several minutes after the EC2 instance to up to get the "Hello World" message on be browser  
-2. You could ssh to the EC2 instance and check /tmp/install.out on the state of the install 
-3. Port 22 is open on the Security to allow for troubleshootin besides port 80.  
-4. The code will build the the environment in ap-southeast-2  
+* It may take several minutes after the EC2 instance to up to get the "Hello World" message on be browser  
+* You could ssh to the EC2 instance and check /tmp/install.out on the state of the install 
+* Port 22 is open on the Security to allow for troubleshootin besides port 80.  
+* The code will build the the environment in ap-southeast-2  
 
 # Cleanup
 1. terraform destroy
-   Type "Yes" whem prompted for confirmation 
+    Type "Yes" whem prompted for confirmation 
 
