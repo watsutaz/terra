@@ -1,8 +1,9 @@
+# Instance creation using Amazon Linux 2 AMI (HVM), SSD Volume Type 
 resource "aws_instance" "sinatra-app-aws_instance" {
   ami  = "ami-08589eca6dcc9b39c"
   instance_type = "t2.micro"
-  iam_instance_profile = "${aws_iam_instance_profile.sinatra-app-instance-profile.id}"
 
+  # Disk size
   root_block_device {
     volume_type = "standard"
     volume_size = 20
@@ -13,15 +14,21 @@ resource "aws_instance" "sinatra-app-aws_instance" {
     create_before_destroy = true
   }
 
+  # Monitoring not required
   monitoring = false
 
+  # Subnet of the EC2 instance
   subnet_id="${aws_subnet.sinatra-app-public-subnet-01.id}"
 
+  # Security groups to be assigned
   vpc_security_group_ids = [
     "${aws_security_group.sinatra-app-public-security-group.id}",
   ]
+  # Assigned a public ip
   associate_public_ip_address = "true"
+  # Set the key pair for ssh login
   key_name = "${var.key_pair_name}"
+  # Commands to update, install required pre-req and execute the commands to run the app
   user_data = <<EOF
                 #!/bin/bash
                 LOGFILE=/tmp/install.out
@@ -52,4 +59,8 @@ resource "aws_instance" "sinatra-app-aws_instance" {
                 echo "END OF SCRIPT"
                 } 2>&1 | tee -a $LOGFILE
                 EOF
+
+  tags {
+    Name = "${var.sinatra-app}"
+  }
 }

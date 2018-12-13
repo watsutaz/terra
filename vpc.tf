@@ -1,12 +1,11 @@
 # Declare the data source
 data "aws_availability_zones" "available" {}
 
-
-# Define a vpc
+# Define a new VPC
 resource "aws_vpc" "sinatra-app-vpc" {
   cidr_block = "${var.sinatra-app_network_cidr}"
   tags {
-    Name = "${var.sinatra-app-vpc}"
+    Name = "${var.sinatra-app}"
   }
 }
 
@@ -14,17 +13,17 @@ resource "aws_vpc" "sinatra-app-vpc" {
 resource "aws_internet_gateway" "sinatra-app-internet-gateway" {
   vpc_id = "${aws_vpc.sinatra-app-vpc.id}"
   tags {
-    Name = "sinatra-app-internet-gateway"
+    Name = "${var.sinatra-app}"
   }
 }
 
-# Public subnet 1
+# Public subnet 
 resource "aws_subnet" "sinatra-app-public-subnet-01" {
   vpc_id = "${aws_vpc.sinatra-app-vpc.id}"
   cidr_block = "${var.sinatra-app-public-subnet-01_cidr}"
   availability_zone = "${data.aws_availability_zones.available.names[0]}"
   tags {
-    Name = "sinatra-app-public-subnet-01"
+    Name = "${var.sinatra-app}"
   }
 }
 
@@ -36,7 +35,7 @@ resource "aws_route_table" "sinatra-app-public-subnet-routing-table-01" {
     gateway_id = "${aws_internet_gateway.sinatra-app-internet-gateway.id}"
   }
   tags {
-    Name = "sinatra-app-public-subnet-routing-table-01"
+    Name = "${var.sinatra-app}"
   }
 }
 
@@ -47,6 +46,7 @@ resource "aws_route_table_association" "sinatra-app-public-subnet-routing-table-
 }
 
 # ECS Instance Security group
+# Allow Port 22 to be open for troubleshooting
 resource "aws_security_group" "sinatra-app-public-security-group" {
   name = "sinatra-app-public-security-group"
   description = "Allows HTTP trafic"
@@ -89,6 +89,6 @@ resource "aws_security_group" "sinatra-app-public-security-group" {
   }
 
   tags {
-    Name = "sinatra-app-public-security-group"
+    Name = "${var.sinatra-app}"
   }
 }

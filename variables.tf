@@ -1,3 +1,5 @@
+# Defining all variables to be used
+
 variable "key_pair_name" {
   description = "ECS key pair name"
 }
@@ -26,5 +28,9 @@ variable "sinatra-app_network_cidr" {
 
 variable "sinatra-app-public-subnet-01_cidr" {
   description = "Public CIDR for externally accessible subnet"
+}
+
+variable "sinatra-app" {
+  description = "Environment tag name"
 }
 
