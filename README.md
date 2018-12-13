@@ -14,11 +14,12 @@ Public_ip address will be displayed on screen
 
 # Testing
 On a browser access the public ip via http  
+Expected output is "Hello World" displayed on the browser
 
 # Notes
 It may take several minutes after the EC2 instance to up to get the "Hello World" message on be browser
 You could ssh to the EC2 instance and check /tmp/install.out on the state of the install 
-Port 22 is open on the Security to allow for troubleshootin besides port 80.
+Port 22 is open on the Security to allow for troubleshootin besides port 80.  
 The code will build the the environment in ap-southeast-2  
 
 
