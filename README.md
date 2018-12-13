@@ -25,5 +25,5 @@
 
 # Cleanup
 1. terraform destroy
-
+   Type "Yes" whem prompted for confirmation 
 
