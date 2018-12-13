@@ -9,7 +9,7 @@
 3. unzip git directory and files  
 4. terraform init  
 5. terraform plan  
-6. terraform apply 
+6. terraform apply  
     Type "Yes" whem prompted for confirmation
 7. Public_ip address will be displayed on screen
 
@@ -24,6 +24,6 @@
 * The code will build the the environment in ap-southeast-2  
 
 # Cleanup
-1. terraform destroy
+1. terraform destroy  
     Type "Yes" whem prompted for confirmation 
 
