@@ -4,8 +4,8 @@
 3. Key-pair "sinatra-app" created in the AWS EC2 with key downloaded 
 
 # How to Run
-1. shell$ export AWS_ACCESS_KEY_ID="YOUR AWS ACCESS KEY ID"  
-2. shell$ export AWS_SECRET_ACCESS_KEY="YOUR SECRET ACCESS KEY"  
+1. shell$ export AWS_ACCESS_KEY_ID="<YOUR AWS ACCESS KEY ID>"  
+2. shell$ export AWS_SECRET_ACCESS_KEY="<YOUR SECRET ACCESS KEY>"  
 3. unzip git directory and files  
 4. shell$ terraform init  
 5. shell$ terraform plan  
