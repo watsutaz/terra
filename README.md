@@ -13,7 +13,7 @@ terraform plan
 terraform apply 
 
 # Testing
-On a browser: "http://<EC2 externalip address>"
+On a browser: 'http://<EC2 external_ip address>'
 
 # Notes
 It may take several minutes after the EC2 instance to up to get the "Hello World" prompt
