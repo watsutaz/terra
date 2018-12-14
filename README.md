@@ -6,12 +6,11 @@
 # How to Run
 1. shell$ export AWS_ACCESS_KEY_ID="<YOUR AWS ACCESS KEY ID>"  
 2. shell$ export AWS_SECRET_ACCESS_KEY="<YOUR SECRET ACCESS KEY>"  
-3. unzip git directory and files  
-4. shell$ terraform init  
-5. shell$ terraform plan  
-6. shell$ terraform apply  
+3. shell$ terraform init  
+4. shell$ terraform plan  
+5. shell$ terraform apply  
     Type "Yes" whem prompted "Do you want to perform these actions?"
-7. Public_ip address will be displayed on screen
+6. Public_ip address will be displayed on screen
 
 # Testing
 1. On a browser access the public ip via http  
